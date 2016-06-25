@@ -90,7 +90,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-  
+    .state('tab.checkvehic', {
+      url: '/checkvehic',
+      views: {
+        'tab-checkvehic': {
+          templateUrl: 'templates/tab-checkvehic.html',
+          controller: 'CheckVehicCtrl'
+        }
+      }
+    })
   
   ;
 

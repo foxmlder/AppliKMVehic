@@ -20,4 +20,8 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('CheckVehicCtrl', function($scope) {
+
+})
+
 ;
