@@ -40,46 +40,61 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.accueil', {
+    url: '/accueil',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-accueil': {
+        templateUrl: 'templates/tab-accueil.html',
+        controller: 'AccueilCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.pbvehic', {
+      url: '/pbvehic',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-pbvehic': {
+          templateUrl: 'templates/tab-pbvehic.html',
+          controller: 'PbVehicCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+ 
+  .state('tab.reporting', {
+      url: '/reporting',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-reporting': {
+          templateUrl: 'templates/tab-reporting.html',
+          controller: 'ReportingCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+  .state('tab.saisiekm', {
+      url: '/saisiekm',
+      views: {
+        'tab-saisiekm': {
+          templateUrl: 'templates/tab-saisiekm.html',
+          controller: 'SaisieKMCtrl'
+        }
       }
-    }
-  });
+    })
+
+  .state('tab.paramappli', {
+      url: '/paramappli',
+      views: {
+        'tab-paramappli': {
+          templateUrl: 'templates/tab-paramappli.html',
+          controller: 'ParamAppliCtrl'
+        }
+      }
+    })
+
+  
+  
+  ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/accueil');
 
 });
